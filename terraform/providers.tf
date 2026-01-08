@@ -2,9 +2,9 @@ terraform {
   required_version = ">= 1.0.0"
 
   backend "s3" {
-    bucket         = "zurichai-test-terraform-state-2025" # Replace with your bucket name
+    bucket         = "zurichai-test-terraform-state-2026" # Replace with your bucket name
     key            = "prod/terraform.tfstate"
-    region         = "us-west-2"
+    region         = "us-east-1"
     encrypt        = true
     # dynamodb_table = "terraform-lock" # Optional: prevents concurrent runs
   }
@@ -18,5 +18,5 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
